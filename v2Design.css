@@ -315,6 +315,7 @@
     color: #a8dadc;
   }
   
+  
   /* Footer */
   footer {
     background: #1d3557;
@@ -364,6 +365,11 @@
   opacity: 0;
   width: 0;
   height: 0;
+}
+#toggleText {
+  color: #ffffff; 
+  display: inline-block;      
+  margin-top: 6px;
 }
 
 .slider {
