@@ -108,7 +108,7 @@
     transition: background 0.3s ease;
   }
   .cta-btn:hover {
-    background: #f1faee;
+    background: #cae4fb;
   }
   
   /* Hero Image with Bubble Effect */
@@ -350,4 +350,156 @@
     text-decoration: none; 
 }
 
- 
+/* Dark Mode Overrides */
+/* Toggle Switch Styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 20px; /* Adjust spacing as needed */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(255, 255, 255);
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded slider */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.dark-mode {
+  background-color: #151524; /* Dark background */
+  color: #e0e0e0; /* Lighter text for contrast */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+}
+
+/* Header Adjustments */
+.dark-mode header {
+  background: #283964; /* Darker header */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .logo,
+.dark-mode .nav-btn {
+  color: #86d3ea;
+}
+.dark-mode .nav-btn:hover {
+  color: #114460;
+}
+
+.dark-mode .nav-btn {
+  border: 2px solid #bbb;
+}
+
+/* Hero Section */
+.dark-mode #hero {
+  background: linear-gradient(135deg, #202a46, #324388);
+}
+
+/* Cards & Sections */
+.dark-mode .card,
+.dark-mode .project-card {
+  background: #1e1e1e;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .card h3,
+.dark-mode .project-card h3 {
+  color: #fff;
+}
+
+.dark-mode .card p,
+.dark-mode .project-card p {
+  color: #ccc;
+}
+
+/* Footer */
+.dark-mode footer {
+  background: #222;
+  color: #ccc;
+}
+
+/* Other element adjustments as needed */
+
+.dark-mode .section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #6aa8ff;
+  position: relative;
+  text-decoration: none;
+}
+.dark-mode .section h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #a8dadc;
+  margin: 10px auto 0;
+  display: block;
+  text-decoration: none;
+}
+.dark-mode .section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #d4f9ff;
+  text-decoration: none;
+}
+
+.dark-mode .social-icon {
+  margin: 0 10px;
+  font-size: 1.8rem;
+  color: #a8dadc;
+   
+  transition: color 0.3s ease;
+}
+.dark-mode .social-icon:hover {
+  color: #1d3658;
+}
+
+
+
+

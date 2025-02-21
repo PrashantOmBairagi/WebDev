@@ -18,12 +18,17 @@
   <!-- Header -->
   <header>
     <div class="container header-container">
-      <div class="logo">Pandit Prashant Bairagi</div>
+      <div class="logo">Prashant Bairagi</div>
       <nav class="nav">
         <button class="nav-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">About</button>
         <button class="nav-btn" onclick="document.getElementById('education').scrollIntoView({behavior: 'smooth'});">Education</button>
         <button class="nav-btn" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'});">Projects</button>
         <button class="nav-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">Contact</button>
+        <label class="switch">
+          <input type="checkbox" id="darkModeToggle">
+          <span class="slider round"></span>
+        </label>
+        <span id="toggleText">Dark Mode</span>
       </nav>
     </div>
   </header>
@@ -32,7 +37,7 @@
   <section id="hero">
     <div class="container hero-content">
       <div class="hero-text">
-        <h1>Hello, I'm Bairagi</h1>
+        <h1>Hello, I'm Prashant</h1>
         <p>Engineering Student | Tech Enthusiast | Global Affairs Buff</p>
         <button class="cta-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">Learn More</button>
       </div>
@@ -141,5 +146,27 @@
       <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Back to Top</button>
     </div>
   </footer>
+  <script>
+    // Select the toggle input element
+    const darkModeToggle = document.getElementById('darkModeToggle');
+  
+    // Check local storage for previous theme preference
+    
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-mode');
+      darkModeToggle.checked = false;
+    }
+  
+    // Listen for changes on the toggle switch
+    darkModeToggle.addEventListener('change', function() {
+      if (this.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>  
 </body>
 </html>
